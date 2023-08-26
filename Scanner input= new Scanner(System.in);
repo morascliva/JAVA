@@ -1,0 +1,17 @@
+ The line of code Scanner input = new Scanner(System.in); is used to create an instance of the Scanner class for reading input from the console (also known as standard input).
+
+Let's break down the code step by step:
+
+Scanner: This is the name of the class in Java that provides methods for reading various types of input.
+
+input: This is the name given to the instance of the Scanner class that you're creating. You can choose any valid identifier as the name for your instance. In this case, it's named input.
+
+new Scanner(System.in): This part of the code creates a new instance of the Scanner class and associates it with the standard input stream (System.in). Here's what it means:
+
+new Scanner(...): This is a special syntax in Java used to create a new object instance from a class. It's followed by the class constructor, and in this case, it's used to create a new Scanner object.
+
+System.in: This refers to the standard input stream, which is typically connected to the keyboard. It represents the input source from which the Scanner instance will read data.
+
+So, when you put it all together, Scanner input = new Scanner(System.in); means that you're creating a new Scanner object named input, and you're setting it up to read input data from the keyboard/console (standard input).
+
+Once you have this Scanner instance (input in this case), you can use its various methods to read data from the standard input, such as input.nextInt(), input.nextLine(), input.nextDouble(), and so on
