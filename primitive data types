@@ -1,0 +1,34 @@
+int age = 25;
+double pi = 3.14159;
+char initial = 'A';
+boolean isValid = true;
+
+
+In Java, "primitives" refer to the basic data types that are built into the language and are used to represent simple values. These data types are not objects and do not belong to any class hierarchy.
+Java has eight primitive data types, which can be categorized into four groups:
+
+Integer Types:
+
+byte: 8-bit signed integer
+short: 16-bit signed integer
+int: 32-bit signed integer
+long: 64-bit signed integer
+Floating-Point Types:
+
+float: 32-bit single-precision floating-point
+double: 64-bit double-precision floating-point
+Character Type:
+
+char: 16-bit Unicode character
+Boolean Type:
+
+boolean: Represents true or false values
+These primitive data types are used to represent simple values like numbers, characters, and boolean values in a memory-efficient manner. 
+They have certain characteristics, such as fixed sizes and well-defined ranges, which make them suitable for various purposes where performance and memory usage are critical.
+
+Primitives have some limitations compared to objects (which are instances of classes). They lack methods and cannot be directly used in generic collections, 
+but Java provides wrapper classes (e.g., Integer, Double, Character, Boolean) that allow primitives to be used as objects when necessary.
+This process is known as "boxing" (converting a primitive to its corresponding wrapper object) and "unboxing" (converting a wrapper object back to a primitive).
+
+In modern Java programming, the use of primitives is common due to their efficiency, but in more complex scenarios,
+where objects are required or additional functionalities are needed, Java's object-oriented features and wrapper classes can be utilized.
