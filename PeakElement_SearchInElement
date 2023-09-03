@@ -6,12 +6,12 @@ class HelloWorld {
 
         int[] arr = {1, 2, 3, 4, 5, 6, 3, 1};
         int target = 5;
-        int ans = search(arr, target);
+        int ans = search(arr, target);         // arr,target are arguments
         System.out.println(ans);
 
     }
 
-    public static int search(int[] arr, int target) {
+    public static int search(int[] arr, int target) {             //arr,target are input parameters 
         int peak = peakIndexInMountainArray(arr);
         int firstTry = orderAgnostics(arr, target, 0, peak);
         if (firstTry != -1) {
@@ -35,11 +35,13 @@ class HelloWorld {
         return start;
     }
 
-    public static int orderAgnostics(int[] arr, int target, int start, int end) {
-        boolean isAsc = arr[start] < arr[end];
+    public static int orderAgnostics(int[] arr, int target, int start, int end) {                \\The orderAgnostics method is used 
+                                                                                                  to search for a target element in a
+                                                                                                   subarray of the arr array.
+        boolean isAsc = arr[start] < arr[end];               // isAsc is the variable being defined 
 
         while (start <= end) {
-            int mid = start + (end - start) / 2;
+            int mid = start + (end - start) / 2;    
 
             if (arr[mid] == target) {
                 return mid;
