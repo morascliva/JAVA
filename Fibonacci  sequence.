@@ -1,22 +1,30 @@
 The Fibonacci sequence is a mathematical sequence of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1. 
 The sequence goes like this: 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on.
 
- public class Fibo {
-    public static void main(String[] args) {
+ public class Fibo {                                //This line declares a Java class named Fibo
+    public static void main(String[] args) {         //This line is the entry point of your Java program. It defines the main method, which is the starting point for the
+                                                     execution of your program.
        
-       Scanner in =new Scanner(System.in);
-       int  n=in.mextInt();
-       int a=0;
+       Scanner in =new Scanner(System.in);      //create a new Scanner object named in to read input from the standard input 
+       int  n=in.nextInt();                         // This is an attempt to read an integer from the user's input and store it in the variable n.
+       int a=0;                //These two lines declare two integer variables a and b and initialize them with the values 0 and 1, respectively. 
+                                These variables will be used to calculate Fibonacci numbers.
        int b=1;
-       int count=2;
+       int count=2;     //This line initializes an integer variable count with the value 2. It will be used to keep track of the current position in 
+                        the Fibonacci sequence.
     }
-    while(count<=n){
+    while(count<=n){              //This line starts a while loop that will execute as long as the condition count <= n is true. 
+                                   This loop is used to calculate Fibonacci numbers up to the nth Fibonacci number.
     int temp=b;
-    b=b+a;
-    
+    b=b+a;                                       Inside the loop, you declare an integer variable temp and set its value to the current value of b. 
+                                                 This variable is used to temporarily store the value of b before it is updated.This line updates the
+                                                 value of b by adding a to it. This step is a part of calculating the next Fibonacci number.
+                                                  Here, you update the value of a to the previous value of b (which was stored in temp).
+                                                   This increments the count variable by 1 to move to the next position in the Fibonacci sequence.
     a=temp;
     count++;
     }
-    System.out.println(b);
+    System.out.println(b);                         this line prints the value of b, which should be the nth Fibonacci number, 
+                                                  to the standard output (usually the console).
 }
 }
