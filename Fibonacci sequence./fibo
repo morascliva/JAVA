@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Fibo {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int a = 0;
+        int b = 1;
+        int count = 2;
+
+        while (count <= n) {
+            int temp = b;
+            b = b + a;
+            a = temp;
+            count++;
+        }
+
+        System.out.println(b);
+    }
+}
+
+
+Importing the Scanner class: The program begins by importing the java.util.Scanner class, which allows the user to input data from the console.
+
+Declaring and Initializing Variables:
+
+Scanner in = new Scanner(System.in);: This line creates a Scanner object called in to read input from the console.
+int n = in.nextInt();: It reads an integer n from the user, which represents the position of the Fibonacci number to be calculated.
+int a = 0; and int b = 1;: These variables a and b are used to store the two most recent Fibonacci numbers. They are initialized with the first two Fibonacci numbers, which are 0 and 1.
+int count = 2;: This variable count is initialized to 2 because we've already set a and b to the first two Fibonacci numbers, and we will start calculating from the third Fibonacci number (position 2 in the sequence).
+Calculating the nth Fibonacci Number:
+
+The program uses a while loop to calculate the Fibonacci number at position n iteratively.
+Inside the loop, int temp = b; temporarily stores the current value of b in the temp variable.
+b = b + a; updates b to the next Fibonacci number by adding the previous two Fibonacci numbers (a and temp).
+a = temp; updates a to be the previous value of b (which was stored in temp), preparing it for the next iteration.
+count++; increments the count variable to track the position in the Fibonacci sequence.
+Printing the Result:
+
+Once the loop finishes executing, it means that b contains the nth Fibonacci number.
+System.out.println(b); is used to print the result to the console, which is the nth Fibonacci number.
+End of Program: The program ends, and the user sees the nth Fibonacci number printed on the console.
