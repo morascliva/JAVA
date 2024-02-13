@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         int[] arr = {121, 1331, 1221, 12321};
         int result = GfG.palinArray(arr, arr.length);
-        System.out.println("Result: " + result);  // Output: 1 (All elements are palindromes)
+        System.out.println("Result: " + result); 
     }
 }
 
