@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+class Solution {
+    boolean fascinating(long n) {
+        // Convert the number to a string
+        String concatenated = Long.toString(n) + Long.toString(n * 2) + Long.toString(n * 3);
+        
+        // Convert the concatenated string to a character array
+        char[] digits = concatenated.toCharArray();
+        
+        // Sort the array
+        Arrays.sort(digits);
+        
+        // Check if the sorted array contains all digits from '1' to '9'
+        for (int i = 0; i < 9; i++) {
+            if (digits[i] != (char) (i + '1')) {
+                return false;
+            }
+        }
+        
+        // If all digits from '1' to '9' are present exactly once, return true
+        return true;
+    }
+}
