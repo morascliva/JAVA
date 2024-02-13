@@ -1,0 +1,15 @@
+
+
+class Solution {
+    ArrayList<Integer> valueEqualToIndex(int arr[], int n) {
+        ArrayList<Integer> resultList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == i) {
+                resultList.add(i);
+                 System.out.print(arr[i]);
+            }
+        }
+        return resultList;
+       
+    }
+}
