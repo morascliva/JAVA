@@ -1,0 +1,17 @@
+class Solution {
+    public int calculateSum(int[][] Grid) {
+        int sum = 0;
+        int numRows = Grid.length;
+        int numCols = Grid[0].length;
+
+        // Iterate through each element in the grid
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
+                // Add the value of the current element to the sum
+                sum += Grid[i][j];
+            }
+        }
+
+        return sum;
+    }
+}
