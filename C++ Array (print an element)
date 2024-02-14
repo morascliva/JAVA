@@ -1,0 +1,11 @@
+class Solution {
+public:
+    int findElementAtIndex(int a[], int n, int key) {
+        for(int i = 0; i < n; i++) {
+            if(key == i) {
+                return a[i]; // Return the element at index 'key'
+            }
+        }
+        return -1; // Indicate that the element at index 'key' is not found
+    }
+};
