@@ -1,0 +1,17 @@
+class Solve {
+    int[] getMoreAndLess(int[] arr, int n, int x) {
+        int count1 = 0; // count of elements greater than x
+        int count2 = 0; // count of elements less than or equal to x
+        
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > x) {
+                count1++;
+            } else if (arr[i] <= x) {
+                count2++;
+            }
+        }
+        
+        int[] result = {count1, count2}; // storing counts in an array
+        return result;
+    }
+}
