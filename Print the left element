@@ -1,0 +1,29 @@
+
+
+class Solution {
+    
+    public long leftElement(long arr[], long n)
+    {
+       Arrays.sort(arr);
+       int left =0 ,  right=(int)n-1;
+       
+       boolean removeMax=true;
+       while(left<right){
+           
+           if(removeMax){
+               right--;
+               
+            
+           }
+           
+           else{
+               left++;
+           }
+           
+           removeMax=!removeMax;
+       }
+       
+       return arr[left];
+        
+    }
+}
