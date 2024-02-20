@@ -1,25 +1,91 @@
+//{ Driver Code Starts
+import java.io.*;
+import java.util.*;
 
-class GFG {
-    String longest(String names[], int n) {
-        if(n<=0 || n==null)
-        {
-            return null;
-        }
-        
-        
-        String longestname=names[0];
-        
-        
-        
-        for(int i=0;i<n;i++)
-        {
-            if(name[i]>longestname)
-            {
-                longestname =name[i];
-            }
-        }
-        
-        
-        return longestname;
+
+class StringArray
+{
+    public static String[] input(BufferedReader br, int n) throws IOException
+    {
+        String[] s = br.readLine().trim().split(" ");
+        return s;
+    }
+
+    public static void print(String[] a)
+    {
+        for(String e : a)
+            System.out.print(e + " ");
+        System.out.println();
+    }
+
+    public static void print(ArrayList<String> a)
+    {
+        for(String e : a)
+            System.out.print(e + " ");
+        System.out.println();
     }
 }
+
+class GFG {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int t;
+        t = Integer.parseInt(br.readLine());
+        while(t-- > 0){
+            
+            int n;
+            n = Integer.parseInt(br.readLine());
+            
+            
+            String[] names = StringArray.input(br, n);
+            
+            Solution obj = new Solution();
+            String res = obj.longest(n, names);
+            
+            System.out.println(res);
+            
+        }
+    }
+}
+
+// } Driver Code Ends
+
+
+
+class Solution {
+    public static String longest(int n, String[] names) {
+
+int count=0;
+String ans =" ";
+
+for(int i=0;i<n;i++){
+    
+    String cur = names[i];
+    
+    int length =cur.length();
+    
+    count =Math.max(length,count);
+}
+
+
+
+for (int i=0;i<n;i++){
+    
+    
+    
+    String cur=names[i];
+    
+    
+    if( cur.length()==count){
+        ans=cur;
+        break;
+    }
+}
+
+
+
+return ans;
+
+    }
+}
+        
