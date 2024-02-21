@@ -16,7 +16,8 @@ class GfG {
         int left = 0;
         int right = str.length() - 1;
         while (left < right) {
-            if (str.charAt(left) != str.charAt(right)) {
+            if (str.charAt(left) != str.charAt(right)) {                           //str.charAt(left): This retrieves the character located at the left index position within the string str.
+                                                                                       str.charAt(right): This retrieves the character located at the right index position within the string str.
                 return false;
             }
             left++;
