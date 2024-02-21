@@ -1,0 +1,27 @@
+/*Complete the Function below*/
+class GfG {
+    public static int palinArray(int[] a, int n) {
+        for (int i = 0; i < n; i++) {
+            if (!isPalindrome(a[i])) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    public static boolean isPalindrome(int num) {
+        String str = String.valueOf(num);                                    //In the isPalindrome method, the line String str = String.valueOf(num); converts the integer num into its string representation.
+                                                                                   This is achieved using the static method valueOf of the String class,
+                                                                                        which takes any primitive type or object and converts it into its string representation.
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
