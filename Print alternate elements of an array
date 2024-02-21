@@ -1,0 +1,15 @@
+class GfG
+{
+    public static void print(int arr[], int n)
+    {
+       for(int i=0;i<n;i++)
+       {
+           if(i%2==0)                                                //This if condition checks if the index i is even. The % operator calculates the remainder of i divided by 2.
+                                                                         If the remainder is 0, then i is even.
+           
+           {
+               System.out.print(arr[i]+" "); 
+           }
+       }
+    }
+}
