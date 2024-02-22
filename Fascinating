@@ -3,7 +3,8 @@ import java.util.Arrays;
 class Solution {
     boolean fascinating(long n) {
         // Convert the number to a string
-        String concatenated = Long.toString(n) + Long.toString(n * 2) + Long.toString(n * 3);
+        String concatenated = Long.toString(n) + Long.toString(n * 2) + Long.toString(n * 3);         //Long.toString(n): This converts the long integer n to its string
+                                                                                                          representation.
         
         // Convert the concatenated string to a character array
         char[] digits = concatenated.toCharArray();
