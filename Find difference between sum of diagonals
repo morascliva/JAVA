@@ -1,0 +1,19 @@
+class Solution {
+    int diagonalSumDifference(int N, int[][] Grid) {
+        int primaryDiagonalSum = 0;
+        int secondaryDiagonalSum = 0;
+
+        // Calculate the sum of elements on the primary diagonal (top-left to bottom-right)
+        for (int i = 0; i < N; i++) {
+            primaryDiagonalSum += Grid[i][i];
+        }
+
+        // Calculate the sum of elements on the secondary diagonal (top-right to bottom-left)
+        for (int i = 0; i < N; i++) {
+            secondaryDiagonalSum += Grid[i][N - 1 - i];
+        }
+
+        // Return the absolute difference between the sums of the diagonals
+        return Math.abs(primaryDiagonalSum - secondaryDiagonalSum);
+    }
+}
