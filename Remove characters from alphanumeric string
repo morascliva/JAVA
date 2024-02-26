@@ -1,0 +1,6 @@
+class Solution {
+    String removeCharacters(String S) {
+        // Use regex to remove all non-numeric characters
+        return S.replaceAll("[^0-9]", "");
+    }
+}
