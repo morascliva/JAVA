@@ -1,0 +1,30 @@
+
+class Sol {
+    int[] count(String s) {
+        int[] counts = new int[4]; // Index 0: Lowercase, Index 1: Uppercase, Index 2: Special characters, Index 3: Numeric values
+        
+        // Iterate through each character in the string
+        for (char c : s.toCharArray()) {
+            // Check if the character is lowercase
+            if (Character.isLowerCase(c)) {
+                counts[0]++;
+            }
+            // Check if the character is uppercase
+            else if (Character.isUpperCase(c)) {
+                counts[1]++;
+            }
+            // Check if the character is a special character
+            else if (!Character.isDigit(c)) {
+                counts[2]++;
+            }
+            // Check if the character is a numeric value
+            else {
+                counts[3]++;
+            }
+        }
+        
+        return counts;
+    }
+    
+   
+}
