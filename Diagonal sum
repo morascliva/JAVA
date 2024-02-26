@@ -4,17 +4,17 @@ class Solution {
         int primaryDiagonalSum = 0;
         int secondaryDiagonalSum = 0;
 
-        // Calculate the sum of elements on the primary diagonal (top-left to bottom-right)
+       
         for (int i = 0; i < n; i++) {
             primaryDiagonalSum += matrix[i][i];
         }
 
-        // Calculate the sum of elements on the secondary diagonal (top-right to bottom-left)
+       
         for (int i = 0; i < n; i++) {
             secondaryDiagonalSum += matrix[i][n - 1 - i];
         }
 
-        // Return the sum of both diagonals
+        
         return primaryDiagonalSum + secondaryDiagonalSum;
     }
 }
