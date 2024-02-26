@@ -1,0 +1,13 @@
+class GfG {
+    boolean isBinary(String str) {
+        
+        for (char c : str.toCharArray()) {
+            
+            if (c != '0' && c != '1') {
+                return false;
+            }
+        }
+       
+        return true;
+    }
+}
