@@ -1,0 +1,37 @@
+
+
+class Solution {
+    ArrayList<String> extractIntegerWords(String s) {
+        ArrayList<String> integers = new ArrayList<>();
+        
+        // Split the string based on non-digit characters
+        String[] words = s.split("\\D+");                               //s.split(): This method is called on the string s. It splits the string into an array of substrings based on the given regular 
+                                                                          expression pattern.
+                                                                          \: In Java strings, the backslash \ is an escape character. 
+
+                                                                          \D is a predefined character class in regular expressions.
+                                                                           It matches any character that is not a digit. The uppercase D is the negation of the \d character class, which matches digits.
+
+                                                                              +: The + quantifier means "one or more occurrences"
+
+
+
+
+
+        // Filter out non-integer strings and add them to the list
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                integers.add(word);
+            }
+        }
+        
+        return integers;
+    }
+    
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String s = "I have 10 apples and 5 oranges, so I have 15 fruits in total.";
+        ArrayList<String> integers = solution.extractIntegerWords(s);
+        System.out.println(integers); // Output: [10, 5, 15]
+    }
+}
