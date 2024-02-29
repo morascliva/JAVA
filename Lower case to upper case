@@ -1,0 +1,6 @@
+class Solution {
+    String to_upper(String str) {
+        // Use the toUpperCase() method to convert the string to uppercase
+        return str.toUpperCase();
+    }
+}
