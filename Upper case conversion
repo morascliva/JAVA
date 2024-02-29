@@ -1,0 +1,28 @@
+class Solution {
+    public String transform(String s) {
+        // Split the string into words
+        String[] words = s.split("\\s+");
+        
+        StringBuilder result = new StringBuilder();
+        
+        for (String word : words) {                                         This line starts a loop that iterates over each word in the words array obtained from splitting the input string.
+            if (!word.isEmpty()) {
+
+
+                // Capitalize the first letter of each word
+                char firstLetter = Character.toUpperCase(word.charAt(0));
+                result.append(firstLetter).append(word.substring(1)).append(" ");  //This line appends the transformed word to the StringBuilder result. 
+                                                                                It appends the capitalized first letter (firstLetter), followed by the rest of the word obtained using word.substring(1),
+                                                                                and adds a space at the end to separate words.
+
+
+
+
+            }
+        }
+        
+        // Remove the trailing space and return the result
+        return result.toString().trim();                                 //This line converts the StringBuilder result to a string using toString(), trims any trailing whitespace using trim(),
+                                                                          and returns the transformed string as the output of the method.
+    }
+}
