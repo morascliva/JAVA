@@ -1,0 +1,6 @@
+class Solution {
+    String modify(String S) {
+        // Use the replaceAll() method to remove spaces
+        return S.replaceAll("\\s", "");                          //s: The character s is a metacharacter in regular expressions that represents any whitespace character. This includes spaces, tabs, and newlines.
+    }
+}
