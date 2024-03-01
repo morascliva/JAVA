@@ -1,0 +1,14 @@
+class Solution {
+    static String revStr(String S) {
+        StringBuilder reversed = new StringBuilder();
+
+        // Iterate through the characters of the string in reverse order
+        for (int i = S.length() - 1; i >= 0; i--) {
+            // Append each character to the StringBuilder in reverse order
+            reversed.append(S.charAt(i));
+        }
+
+        // Convert the StringBuilder to a string and return
+        return reversed.toString();
+    }
+}
