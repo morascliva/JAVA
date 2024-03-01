@@ -1,0 +1,18 @@
+class Solution {
+    static String conRevstr(String S1, String S2) {
+        // Concatenate the two strings
+        String concatenated = S1 + S2;
+
+        // Initialize a StringBuilder to construct the reversed string
+        StringBuilder reversed = new StringBuilder();
+
+        // Iterate through the characters of the concatenated string in reverse order
+        for (int i = concatenated.length() - 1; i >= 0; i--) {
+            // Append each character to the StringBuilder in reverse order
+            reversed.append(concatenated.charAt(i));
+        }
+
+        // Convert the StringBuilder to a string and return
+        return reversed.toString();
+    }
+}
