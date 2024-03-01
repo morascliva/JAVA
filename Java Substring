@@ -1,0 +1,1 @@
+S.substring(L, R + 1): This line extracts the substring from index L to R (inclusive) of the string S using the substring method.
