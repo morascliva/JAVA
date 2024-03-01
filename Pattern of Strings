@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+class Solution {
+    ArrayList<String> pattern(String S) {
+        ArrayList<String> result = new ArrayList<>();
+
+        // Iterate through the characters of the input string
+        for (int i = 0; i < S.length(); i++) {
+            // Append the substring of S from index 0 to i to the result list
+            result.add(S.substring(0, S.length() - i));
+        }
+
+        return result;
+    }
+}
