@@ -1,0 +1,25 @@
+
+class Solution {
+    static List<String> splitString(String S) {
+        List<String> result = new ArrayList<>();
+        StringBuilder alphabets = new StringBuilder();
+        StringBuilder numbers = new StringBuilder();
+        StringBuilder specialChars = new StringBuilder();
+
+        for (char ch : S.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                alphabets.append(ch);
+            } else if (Character.isDigit(ch)) {
+                numbers.append(ch);
+            } else {
+                specialChars.append(ch);
+            }
+        }
+
+        result.add(alphabets.toString());
+        result.add(numbers.toString());
+        result.add(specialChars.toString());
+
+        return result;
+    }
+}
