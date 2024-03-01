@@ -1,0 +1,34 @@
+class Solution {
+    static String reciprocalString(String S) {
+        StringBuilder result = new StringBuilder();
+
+        for (char ch : S.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                char firstLetter = Character.isUpperCase(ch) ? 'A' : 'a';
+                char lastLetter = Character.isUpperCase(ch) ? 'Z' : 'z';
+
+                // Calculate the reciprocal position
+                int diff = ch - firstLetter;
+                char reciprocal = (char) (lastLetter - diff);
+
+                result.append(reciprocal);
+            } else {
+                // If the character is not a letter, its reciprocal will be the same character
+                result.append(ch);
+            }
+        }
+
+        return result.toString();
+    }
+}
+
+
+
+
+lastLetter - diff: This expression calculates the position of the reciprocal letter by subtracting the difference (diff) from the last letter (lastLetter).
+
+diff: This variable holds the difference between the position of the current character ch and the first letter (firstLetter).
+
+lastLetter: This variable holds the value of the last letter ('Z' for uppercase or 'z' for lowercase).
+
+(char): This is a cast to convert the result of the subtraction to a char type. The subtraction operation results in an integer value, so we cast it back to char.
