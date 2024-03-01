@@ -1,0 +1,12 @@
+printNos(N - 1): This line recursively calls the printNos method with the value N - 1. This continues until N becomes 0, causing the recursion to stop.
+
+
+
+class Solution {
+    public void printNos(int N) {
+        if (N > 0) {
+            printNos(N - 1); // Recursively call printNos with N - 1
+            System.out.println(N); // Print the current number
+        }
+    }
+}
