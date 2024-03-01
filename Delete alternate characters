@@ -1,0 +1,16 @@
+class Solution {
+    static String delAlternate(String S) {
+        StringBuilder result = new StringBuilder();
+
+        // Iterate through each character of the input string
+        for (int i = 0; i < S.length(); i++) {
+            // Check if the index is even
+            if (i % 2 == 0) {
+                // Append the character at even index to the result
+                result.append(S.charAt(i));
+            }
+        }
+
+        return result.toString();
+    }
+}
