@@ -1,10 +1,4 @@
-public class Main {
-    public static void main(String[] args) {
-        int[] arr = {121, 1331, 1221, 12321};
-        int result = GfG.palinArray(arr, arr.length);
-        System.out.println("Result: " + result); 
-    }
-}
+
 
 class GfG {
     public static int palinArray(int[] a, int n) {
@@ -30,3 +24,8 @@ class GfG {
         return true;
     }
 }
+
+
+valueOf() method: This method takes a parameter of any type (int, float, double, etc.) and returns a string representation of that value.
+String.valueOf(num): This expression takes the numerical value stored in the variable num and converts it into a string. The resulting string 
+will contain the textual representation of the number.
