@@ -1,9 +1,10 @@
 //User function Template for Java
+
 class Solution {
 
     public void scores(long a[], long b[]) {
-        int scoreA = 0;
-        int scoreB = 0;
+        long scoreA = 0;
+        long scoreB = 0;
 
         for (int i = 0; i < a.length; i++) {
             if (a[i] > b[i]) {
@@ -11,9 +12,9 @@ class Solution {
             } else if (a[i] < b[i]) {
                 scoreB++;
             }
+            
         }
 
-        System.out.println( scoreA + scoreB);
-        
+        System.out.print(scoreA + " " + scoreB); 
     }
 }
