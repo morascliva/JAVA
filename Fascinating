@@ -6,8 +6,13 @@ class Solution {
         String concatenated = Long.toString(n) + Long.toString(n * 2) + Long.toString(n * 3);         //Long.toString(n): This converts the long integer n to its string
                                                                                                           representation.
         
-        // Convert the concatenated string to a character array                                       //concatenated.toCharArray(): This method converts the string concatenated into an array of characters. 
-                                                                                                      Each character in the string becomes an element in the character array.
+        // Convert the concatenated string to a character array                                     
+
+//concatenated.toCharArray(): This method converts the string concatenated into an array of characters. 
+                                                                                                     
+Each character in the string becomes an element in the character array.
+
+
         char[] digits = concatenated.toCharArray();
         
         // Sort the array
@@ -19,8 +24,7 @@ class Solution {
                 return false;
             }
         }
-        
-        // If all digits from '1' to '9' are present exactly once, return true
+  
         return true;
     }
 }
