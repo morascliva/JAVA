@@ -1,0 +1,25 @@
+class Solution{
+    static String getBinaryRep(int N){
+        StringBuilder binary = new StringBuilder();
+        
+        // Special case when N is 0
+        if (N == 0) {
+            binary.append(0);
+        }
+        
+        // Convert decimal to binary
+        while (N > 0) {
+            int remainder = N % 2;
+            binary.insert(0, remainder); // Inserting remainder at the beginning of the string
+            N /= 2;
+        }
+        
+        return binary.toString();
+    }
+    
+    public static void main(String[] args) {
+        // Test the function
+        int number = 10;
+        System.out.println("Binary representation of " + number + " is: " + getBinaryRep(number));
+    }
+}
