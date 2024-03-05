@@ -2,11 +2,6 @@ class Solution{
     static String getBinaryRep(int N){
         StringBuilder binary = new StringBuilder();
         
-        // Special case when N is 0
-        if (N == 0) {
-            binary.append(0);
-        }
-        
         // Convert decimal to binary
         while (N > 0) {
             int remainder = N % 2;
@@ -14,12 +9,18 @@ class Solution{
             N /= 2;
         }
         
+        // Add leading zeros if necessary
+        int length = binary.length();
+        for (int i = 0; i < 32 - length; i++) {
+            binary.insert(0, "0");
+        }
+        
         return binary.toString();
     }
     
     public static void main(String[] args) {
         // Test the function
-        int number = 10;
+        int number = 2;
         System.out.println("Binary representation of " + number + " is: " + getBinaryRep(number));
     }
 }
