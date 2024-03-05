@@ -12,13 +12,15 @@ class Solution{
             N /= 2;
         }
         
-        // Add leading zeros if necessary
+        // Add leading zeros if necessary                                                          we ensure that the binary representation has a fixed length of 32 bits by adding leading zeros if necessary.
+                                                                                                 It calculates the current length of the binary string (length) and adds leading zeros until the length becomes 
+                                                                                                  32.
         int length = binary.length();
         for (int i = 0; i < 32 - length; i++) {
             binary.insert(0, "0");
         }
         
-        return binary.toString();
+        return binary.toString();                                                                This line converts the StringBuilder binary back to a string and returns it.
     }
     
     public static void main(String[] args) {
