@@ -29,3 +29,5 @@ class Solution{
         System.out.println("Binary representation of " + number + " is: " + getBinaryRep(number));
     }
 }
+                                                                                                These lines define the main method, where we test the getBinaryRep function by passing a sample number 
+                                                                                               (2 in this case) and printing out the result.
