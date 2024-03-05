@@ -1,0 +1,28 @@
+class Solution {
+    static int logicalOperation(int A, int B, int C, int D, int E, int F) {
+        // Step 1: Compute the negation of A
+        int notA = (A == 0) ? 1 : 0;
+
+        // Step 2: Multiply the negation of A with B
+        int result1 = notA * B;
+
+        // Step 3: Perform the AND operation between C and D
+        int result2 = C * D;
+
+        // Step 4: Compute the negation of F
+        int notF = (F == 0) ? 1 : 0;
+
+        // Step 5: Multiply E with the negation of F
+        int result3 = E * notF;
+
+        // Step 6: Sum up the results of steps 2, 3, and 5
+        return result1 + result2 + result3;
+    }
+
+    public static void main(String[] args) {
+        // Testing the function
+        int A = 1, B = 0, C = 1, D = 0, E = 1, F = 0;
+        int result = logicalOperation(A, B, C, D, E, F);
+        System.out.println("Result of logical operation: " + result);
+    }
+}
