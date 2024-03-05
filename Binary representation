@@ -1,6 +1,7 @@
 class Solution{
     static String getBinaryRep(int N){
-        StringBuilder binary = new StringBuilder();
+        StringBuilder binary = new StringBuilder();                                //This line creates a StringBuilder object named binary. StringBuilder is used to efficiently construct strings,
+                                                                                  especially when you need to concatenate a large number of strings.
         
         // Convert decimal to binary
         while (N > 0) {
