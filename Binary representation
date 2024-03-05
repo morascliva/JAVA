@@ -5,8 +5,10 @@ class Solution{
         
         // Convert decimal to binary
         while (N > 0) {
-            int remainder = N % 2;
-            binary.insert(0, remainder); // Inserting remainder at the beginning of the string
+            int remainder = N % 2;                                                                                 //This section is where the decimal number N is converted to binary.
+                                                                                                              It iteratively divides N by 2 and appends the remainder (either 0 or 1) to the beginning
+                                                                                                                of the binary StringBuilder.
+            binary.insert(0, remainder); 
             N /= 2;
         }
         
