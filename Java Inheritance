@@ -4,5 +4,6 @@ public class Main {
         obj.add(5, 10); // inherited from cls1
         obj.mul(5, 10); // from cls2
         obj.task(3, 4); // new method added in cls2
+
     }
 }
