@@ -9,6 +9,7 @@ class GfG {
         return 1;
     }
 
+
     public static boolean isPalindrome(int num) {
         String str = String.valueOf(num);                                    //In the isPalindrome method, the line String str = String.valueOf(num); converts the integer num into its string representation.
                                                                                    This is achieved using the static method valueOf of the String class,
