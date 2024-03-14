@@ -10,6 +10,7 @@ class GfG
            {
                System.out.print(arr[i]+" "); 
            }
+
        }
     }
 }
