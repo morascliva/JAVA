@@ -1,11 +1,10 @@
-public class Main {
-    public static void main(String[] args) {
-        cls2 obj = new cls2();
-        obj.add(5, 10); // inherited from cls1
+class cls2 extends cls1 {
+    void mul(int p, int q) {
+        System.out.println(p * q);
+    }
 
-        obj.mul(5, 10); // from cls2
-
-        obj.task(3, 4); // new method added in cls2
-
+    void task(int a, int b) {
+        int sumOfSquares = (a * a) + (b * b);
+        System.out.println(sumOfSquares);
     }
 }
