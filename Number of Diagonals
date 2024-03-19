@@ -1,0 +1,7 @@
+class Solution {
+    public long diagonals(int n) {
+        // Calculate the number of diagonals using the formula
+        long numberOfDiagonals = (long) n * (n - 3) / 2;
+        return numberOfDiagonals;
+    }
+}
