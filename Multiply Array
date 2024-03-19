@@ -1,0 +1,18 @@
+class Solution {
+
+    public static int product(int arr[], int n) {
+        // Check if the array is empty or null
+        if (arr == null || n == 0) {
+            return 0; // Return 0 if the array is empty or null
+        }
+        
+        int result = 1; // Initialize the result to 1
+
+        // Iterate through each element of the array
+        for (int i = 0; i < n; i++) {
+            result *= arr[i]; // Multiply the current element with the result
+        }
+
+        return result; // Return the product
+    }
+}
