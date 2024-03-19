@@ -1,0 +1,7 @@
+class Solution {
+    public static long seriesSum(int n) {
+        // Calculate the sum using the formula for the sum of an arithmetic series
+        long sum = (long) n * (n + 1) / 2;
+        return sum;
+    }
+}
