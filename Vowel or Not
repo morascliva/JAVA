@@ -1,0 +1,14 @@
+class Solution {
+    String isVowel(char c) {
+        // Convert the character to lowercase for case insensitivity
+        c = Character.toLowerCase(c);
+        
+        // Check if the character is a vowel
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            return "YES";
+        } else {
+            return "NO";
+        }
+    }
+}
+
