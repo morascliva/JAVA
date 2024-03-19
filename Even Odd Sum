@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 class Solution {
     ArrayList<Integer> EvenOddSum(int N, int Arr[]) {
