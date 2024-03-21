@@ -14,6 +14,7 @@
                 System.out.print(col + " ");
             }
 
+
             System.out.println();
         }
     }
