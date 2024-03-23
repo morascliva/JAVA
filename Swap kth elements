@@ -1,6 +1,7 @@
 
 class Solution {
     void swapKth(int arr[], int n, int k) {
+
         if (k <= 0 || k > n) {
             // Invalid value of k
             return;
