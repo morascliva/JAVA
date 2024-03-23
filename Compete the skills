@@ -15,6 +15,7 @@ class Solution {
             
         }
 
-        System.out.print(scoreA + " " + scoreB); 
+        GFG.ca=scoreA;
+        GFG.cb=scoreB;
     }
 }
