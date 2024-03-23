@@ -8,7 +8,8 @@ for(int i=0;i<n;i++){
     
     int length =cur.length();
     
-    count =Math.max(length,count);
+    count =Math.max(length,count);              //In Java, Math.max(a, b) is a static method provided by the Math class that
+                                               returns the greater of two values a and b.
 }
 
 for (int i=0;i<n;i++){
