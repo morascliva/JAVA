@@ -1,5 +1,6 @@
 
 class Solution {
+
     //Just print the space seperated array elements
 
     void printArray(int arr[], int n) {
