@@ -1,20 +1,20 @@
-
-
 class Solve {
     int[] getMoreAndLess(int[] arr, int n, int x) {
-        int count1 = 0;
-        int count2 = 0;
-
-        for (int i = 0; i < n; i++) {
-            if (x < arr[i]) {
-                count1++;
-            } else if (x > arr[i]) {
-                count2++;
+        // code here
+        int [] ans=new int[2];
+        int countofSmaller=0;
+        int countofLarger=0;
+        
+        for(int i=0;i<n;i++){
+            if(arr[i]<=x){
+                countofSmaller++;
+            }
+            if(arr[i]>=x){
+                countofLarger++;
             }
         }
-
-        // Store the counts in an array and return it
-        int[] result = {count1, count2};
-        return result;
+        ans[0]=countofSmaller;
+        ans[1]=countofLarger;
+        return ans;
     }
 }
