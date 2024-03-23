@@ -15,7 +15,8 @@ class Solution {
            else{
                left++;
            }
-            removeMax=!removeMax;
+            removeMax=!removeMax;                         //This line toggles the value of removeMax from true to false or from false to true,
+                                                            effectively switching between removing the maximum and minimum elements in each iteration of the loop.
        }
        
        return arr[left];     
