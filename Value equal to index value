@@ -1,6 +1,7 @@
 
 
 class Solution {
+
     ArrayList<Integer> valueEqualToIndex(int arr[], int n) {
 
         ArrayList<Integer> resultList = new ArrayList<>();
