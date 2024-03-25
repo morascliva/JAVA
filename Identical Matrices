@@ -1,4 +1,5 @@
 class Solution {
+
     int areMatricesIdentical(int N, int[][] Grid1, int[][] Grid2) {
         // Check if the dimensions are the same
         if (N != Grid1.length || N != Grid2.length)
