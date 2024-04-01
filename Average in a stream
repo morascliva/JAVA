@@ -4,6 +4,7 @@ class Solution {
         int sum = 0; 
         
         for (int i = 0; i < n; i++) {
+
             sum += arr[i]; 
             averages[i] = (float) sum / (i + 1); 
         }
