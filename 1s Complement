@@ -1,3 +1,4 @@
+
 class Solution {
     static String onesComplement(String S, int N) {
         StringBuilder result = new StringBuilder();
