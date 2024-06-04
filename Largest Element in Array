@@ -1,0 +1,14 @@
+public class LargestElement {
+
+  public static int findLargest(int[] A) {
+    // Initialize largest to the first element of the array
+    int largest = A[0];
+    // Iterate through the array from the second element
+    for (int i = 1; i < A.length; i++) {
+      // If the current element is larger than the largest, update largest
+      if (A[i] > largest) {
+        largest = A[i];
+      }
+    }
+    // Return the largest element
+    return largest;
