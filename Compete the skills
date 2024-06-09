@@ -1,5 +1,4 @@
 class Solution {
-
     public void scores(long a[], long b[]) {
         long scoreA = 0;
         long scoreB = 0;
