@@ -1,4 +1,5 @@
 class Solution {
+
     static String reciprocalString(String S) {
         StringBuilder result = new StringBuilder();
 
