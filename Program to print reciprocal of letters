@@ -7,6 +7,7 @@ class Solution {
                 char firstLetter = Character.isUpperCase(ch) ? 'A' : 'a';
                 char lastLetter = Character.isUpperCase(ch) ? 'Z' : 'z';
 
+
                 // Calculate the reciprocal position
                 int diff = ch - firstLetter;
                 char reciprocal = (char) (lastLetter - diff);
