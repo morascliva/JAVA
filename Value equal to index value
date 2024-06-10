@@ -5,9 +5,8 @@ class Solution {
             if (arr[i] == i+1) {
                 resultList.add(arr[i]);
                  
-            }
-           
-    }
+            } 
+       }
           return resultList;
     }
 }
