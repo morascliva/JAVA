@@ -7,13 +7,14 @@ class Solution {
        boolean removeMax=true;
        while(left<right){
            
-           if(removeMax){
+           if(removeMax)
+           {
                right--;       
            }
-           
-           else{
+           else
+            {
                left++;
-           }
+            }
             removeMax=!removeMax;                         //This line toggles the value of removeMax from true to false or from false to true,
                                                             effectively switching between removing the maximum and minimum elements in each iteration of the loop.
        }
