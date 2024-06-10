@@ -1,8 +1,5 @@
-
-
 class Solution {
     public long[] findElements( long a[], long n)
-
 
     {
         Arrays.sort(a);
