@@ -1,3 +1,4 @@
+
 class Compute
 {
     String average(int A[], int N)
