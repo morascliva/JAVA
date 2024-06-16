@@ -1,3 +1,4 @@
+
 class Solution {
     float[] streamAvg(int[] arr, int n) {
         float[] averages = new float[n]; 
