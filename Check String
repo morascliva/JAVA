@@ -1,4 +1,5 @@
 
+
 class Sol {
     Boolean check(String s) {
         
