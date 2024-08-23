@@ -59,3 +59,15 @@ class Flipkart {
         System.out.println("The Installment price is " + instalPrice);
     }
 }
+
+
+Enter the name of the product:
+Laptop
+Enter the price of the product:
+1000.0
+Enter the quantity of the product:
+2
+Enter the number of months for installment:
+12
+The Total is 2000.0
+The Installment price is 166.66666666666666
