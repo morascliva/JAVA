@@ -50,3 +50,32 @@ class BankAccount {
         account2.displayAccountInfo();
     }
 }
+
+
+
+
+
+
+java -cp /tmp/6TW40NCH3v/BankAccount
+Account 1 Information:
+Account Number: 123456789
+Balance: 5000.0
+Interest Rate: 3.5%
+
+Account 2 Information:
+Account Number: 987654321
+Balance: 10000.0
+Interest Rate: 3.5%
+
+After changing the interest rate:
+Account 1 Information:
+Account Number: 123456789
+Balance: 5000.0
+Interest Rate: 4.0%
+
+Account 2 Information:
+Account Number: 987654321
+Balance: 10000.0
+Interest Rate: 4.0%
+
+=== Code Execution Successful ===
