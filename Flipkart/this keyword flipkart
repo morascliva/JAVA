@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+class Flipkart {
+    // Instance variables
+    String pname;
+    double price;
+    double quantity;
+
+    // Static variable (Optional, for demonstration)
+    static double defaultPrice = 0.0;
+
+    // Method to set product details
+    void setProductDetails(String pname, double price, double quantity) {
+        this.pname = pname; // Using 'this' to refer to instance variable
+        this.price = price; // Using 'this' to refer to instance variable
+        this.quantity = quantity; // Using 'this' to refer to instance variable
+    }
+
+    // Method to calculate total price
+    double addtoCart() {
+        double Total = this.price * this.quantity; // Using 'this' to refer to instance variables
+        return Total;
+    }
+
+    // Method to calculate installment price
+    double CalculateInstallments(double Total, double months) {
+        double instalPrice = Total / months;
+        return instalPrice;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Create an instance of Flipkart
+        Flipkart flipkart = new Flipkart();
+
+        // Input product details
+        System.out.println("Enter the name of the product:");
+        String pname = sc.next();
+
+        System.out.println("Enter the price of the product:");
+        double price = sc.nextDouble();
+
+        System.out.println("Enter the quantity of the product:");
+        double quantity = sc.nextDouble();
+
+        System.out.println("Enter the number of months for installment:");
+        double months = sc.nextDouble();
+
+        // Set product details using the instance method
+        flipkart.setProductDetails(pname, price, quantity);
+
+        // Calculate total price and installments
+        double Total = flipkart.addtoCart();
+        double instalPrice = flipkart.CalculateInstallments(Total, months);
+
+        // Display results
+        System.out.println("The Total is " + Total);
+        System.out.println("The Installment price is " + instalPrice);
+    }
+}
