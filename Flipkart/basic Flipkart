@@ -1,0 +1,48 @@
+import java.util.Scanner;
+class Flipkart{
+    String pname;
+    double price;
+    double quantity;
+    
+    double addtoCart(String pname,double price,double quantity){
+        double Total=price*quantity;
+        System.out.println(Total);
+        return Total;
+    }
+    
+    double CalculateInstallments(double Total,double months){
+        
+        double instalPrice=Total/months;
+        System.out.println(instalPrice);
+        return instalPrice;
+    }
+
+
+public static void main(String[] args){
+    Scanner sc= new Scanner(System.in);
+    
+    System.out.println("Enter the name of the product");
+    String pname=sc.next();
+    
+    System.out.println("Enter the price of the product");
+    double price=sc.nextDouble();
+    
+    System.out.println("Enter the quantity of the product");
+    double quantity=sc.nextDouble();
+    
+    System.out.println("Enter the no of months for installment");
+    double months=sc.nextDouble();
+    
+    
+     Flipkart flipkart = new Flipkart();
+
+       
+        double Total = flipkart.addtoCart(pname, price, quantity);
+        double instalPrice = flipkart.CalculateInstallments(Total, months);
+    
+    System.out.println("The Total is "+ Total);
+    System.out.println("The Installment price is "+ instalPrice);
+    
+}    
+    
+}
