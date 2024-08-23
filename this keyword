@@ -1,0 +1,25 @@
+class Employee {
+    private String name;
+    private int id;
+
+    // Constructor with parameters having the same names as instance variables
+    public Employee(String name, int id) {
+        this.name = name; // 'this.name' refers to the instance variable
+        this.id = id;     // 'this.id' refers to the instance variable
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + this.name);
+        System.out.println("ID: " + this.id);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("John", 101);
+        Employee emp2 = new Employee("Jonny", 1001);
+        
+        emp1.displayInfo();
+        emp2.displayInfo();
+    }
+}
