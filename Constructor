@@ -1,0 +1,27 @@
+class Car {
+    String brand;
+    String model;
+    int year;
+
+    // Constructor
+    Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method
+    void startEngine() {
+        System.out.println(brand + " " + model + " engine started.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a new Car object
+        Car car1 = new Car("Toyota", "Corolla", 2020);
+
+        // Calling the method
+        car1.startEngine();
+    }
+}
