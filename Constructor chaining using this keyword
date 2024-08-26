@@ -1,0 +1,44 @@
+class Vehicle {
+    String type;
+    int wheels;
+    String color;
+
+    // Default constructor
+    Vehicle() {
+        this("Car"); // Calls the constructor with one argument
+        System.out.println("Default constructor called");
+    }
+
+    // Constructor with one argument
+    Vehicle(String type) {
+        this(type, 4); // Calls the constructor with two arguments
+        System.out.println("One-argument constructor called");
+    }
+
+    // Constructor with two arguments
+    Vehicle(String type, int wheels) {
+        this(type, wheels, "Black"); // Calls the constructor with three arguments
+        System.out.println("Two-argument constructor called");
+    }
+
+    // Constructor with three arguments
+    Vehicle(String type, int wheels, String color) {
+        this.type = type;
+        this.wheels = wheels;
+        this.color = color;
+        System.out.println("Three-argument constructor called");
+    }
+
+    void displayInfo() {
+        System.out.println("Vehicle Type: " + type);
+        System.out.println("Number of Wheels: " + wheels);
+        System.out.println("Color: " + color);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle vehicle = new Vehicle();
+        vehicle.displayInfo();
+    }
+}
