@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+// Base class
+class Flipkart {
+    String pname;
+    double price;
+    double quantity;
+    
+    // Method to add to cart and calculate the total price
+    double addtoCart(String pname, double price, double quantity) {
+        double Total = price * quantity;
+        System.out.println("Total price: " + Total);
+        return Total;
+    }
+    
+    // Method to calculate the installment price
+    double calculateInstallments(double Total, double months) {
+        double instalPrice = Total / months;
+        System.out.println("Installment price: " + instalPrice);
+        return instalPrice;
+    }
+}
+
+// Subclass that overrides methods from Flipkart
+class FlipkartPremium extends Flipkart {
+    
+    // Overriding addtoCart method to apply a discount for premium users
+    @Override
+    double addtoCart(String pname, double price, double quantity) {
+        double discount = 0.9; // 10% discount for premium users
+        double Total = (price * quantity) * discount;
+        System.out.println("Total price after premium discount: " + Total);
+        return Total;
+    }
+    
+    // Overriding calculateInstallments method to calculate installments with no interest for premium users
+    @Override
+    double calculateInstallments(double Total, double months) {
+        double instalPrice = Total / months; // Assuming no interest for premium users
+        System.out.println("Installment price with no interest: " + instalPrice);
+        return instalPrice;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter the name of the product:");
+        String pname = sc.next();
+        
+        System.out.println("Enter the price of the product:");
+        double price = sc.nextDouble();
+        
+        System.out.println("Enter the quantity of the product:");
+        double quantity = sc.nextDouble();
+        
+        System.out.println("Enter the number of months for installment:");
+        double months = sc.nextDouble();
+        
+        // Creating an object of FlipkartPremium class
+        Flipkart flipkart = new FlipkartPremium();
+
+        double Total = flipkart.addtoCart(pname, price, quantity);
+        double instalPrice = flipkart.calculateInstallments(Total, months);
+        
+        System.out.println("The Total is: " + Total);
+        System.out.println("The Installment price is: " + instalPrice);
+    }
+}
