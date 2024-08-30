@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class Flipkart {
+    String pname;
+    double price;
+    double quantity;
+
+    // Overloaded method: addtoCart with three parameters
+    double addtoCart(String pname, double price, double quantity) {
+        double Total = price * quantity;
+        System.out.println("Total for " + pname + ": " + Total);
+        return Total;
+    }
+
+    // Overloaded method: addtoCart with two parameters (assuming a default quantity of 1)
+    double addtoCart(String pname, double price) {
+        double Total = price * 1;  // Default quantity is 1
+        System.out.println("Total for " + pname + ": " + Total);
+        return Total;
+    }
+
+    // Overloaded method: CalculateInstallments with two parameters
+    double CalculateInstallments(double Total, double months) {
+        double instalPrice = Total / months;
+        System.out.println("Installment price for " + months + " months: " + instalPrice);
+        return instalPrice;
+    }
+
+    // Overloaded method: CalculateInstallments with one parameter (assuming default 12 months)
+    double CalculateInstallments(double Total) {
+        double instalPrice = Total / 12;  // Default installment period is 12 months
+        System.out.println("Installment price for 12 months: " + instalPrice);
+        return instalPrice;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the name of the product");
+        String pname = sc.next();
+
+        System.out.println("Enter the price of the product");
+        double price = sc.nextDouble();
+
+        System.out.println("Enter the quantity of the product");
+        double quantity = sc.nextDouble();
+
+        System.out.println("Enter the number of months for installment");
+        double months = sc.nextDouble();
+
+        Flipkart flipkart = new Flipkart();
+
+        // Using the overloaded addtoCart method
+        double Total = flipkart.addtoCart(pname, price, quantity); // Calls the method with 3 parameters
+
+        // Using the overloaded CalculateInstallments method
+        double instalPrice = flipkart.CalculateInstallments(Total, months); // Calls the method with 2 parameters
+
+        System.out.println("The Total is " + Total);
+        System.out.println("The Installment price is " + instalPrice);
+    }
+}
