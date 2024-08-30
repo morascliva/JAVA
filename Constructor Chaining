@@ -1,0 +1,67 @@
+// Superclass
+class Person {
+    String name;
+    int age;
+
+    // Constructor with no parameters
+    Person() {
+        this("Unknown", 0); // Chaining to another constructor
+        System.out.println("No-argument Person constructor called.");
+    }
+
+    // Constructor with name and age parameters
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+        System.out.println("Parameterized Person constructor called. Name: " + name + ", Age: " + age);
+    }
+}
+
+// Subclass
+class Employee extends Person {
+    String jobTitle;
+    double salary;
+
+    // Constructor with no parameters
+    Employee() {
+        this("Unknown", 0, "Unknown", 0.0); // Chaining to another constructor
+        System.out.println("No-argument Employee constructor called.");
+    }
+
+    // Constructor with jobTitle and salary parameters
+    Employee(String jobTitle, double salary) {
+        this("Unknown", 0, jobTitle, salary); // Chaining to another constructor
+        System.out.println("Parameterized Employee constructor called. Job Title: " + jobTitle + ", Salary: " + salary);
+    }
+
+    // Constructor with Person parameters and jobTitle and salary
+    Employee(String name, int age, String jobTitle, double salary) {
+        super(name, age); // Calling the superclass constructor
+        this.jobTitle = jobTitle;
+        this.salary = salary;
+        System.out.println("Full-parameter Employee constructor called.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Creating person:");
+        Person person1 = new Person();
+        System.out.println();
+
+        System.out.println("Creating person with parameters:");
+        Person person2 = new Person("John Doe", 30);
+        System.out.println();
+
+        System.out.println("Creating employee:");
+        Employee emp1 = new Employee();
+        System.out.println();
+
+        System.out.println("Creating employee with job title and salary:");
+        Employee emp2 = new Employee("Software Engineer", 80000.0);
+        System.out.println();
+
+        System.out.println("Creating employee with all parameters:");
+        Employee emp3 = new Employee("Jane Smith", 28, "Project Manager", 90000.0);
+    }
+}
