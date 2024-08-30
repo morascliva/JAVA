@@ -1,0 +1,57 @@
+// Base class
+class Shape {
+    String color;
+    
+    // Constructor of the base class
+    Shape(String color) {
+        this.color = color;
+        System.out.println("Shape constructor called. Color: " + color);
+    }
+    
+    // Method to display information about the shape
+    void displayInfo() {
+        System.out.println("Shape color: " + color);
+    }
+}
+
+// Subclass
+class Rectangle extends Shape {
+    double width;
+    double height;
+    
+    // Constructor of the subclass
+    Rectangle(String color, double width, double height) {
+        // Call the constructor of the superclass
+        super(color);
+        this.width = width;
+        this.height = height;
+        System.out.println("Rectangle constructor called. Width: " + width + ", Height: " + height);
+    }
+    
+    // Overriding the displayInfo method to include rectangle dimensions
+    @Override
+    void displayInfo() {
+        // Call the superclass method using super
+        super.displayInfo();
+        System.out.println("Rectangle width: " + width + ", Height: " + height);
+    }
+    
+    // Method to calculate area of the rectangle
+    double calculateArea() {
+        return width * height;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of Rectangle class
+        Rectangle rect = new Rectangle("Red", 5.0, 3.0);
+        
+        // Display information about the rectangle
+        rect.displayInfo();
+        
+        // Calculate and display the area of the rectangle
+        double area = rect.calculateArea();
+        System.out.println("Rectangle area: " + area);
+    }
+}
