@@ -55,3 +55,11 @@ public class Main {
         System.out.println("Rectangle area: " + area);
     }
 }
+
+
+
+Shape constructor called. Color: Red
+Rectangle constructor called. Width: 5.0, Height: 3.0
+Shape color: Red
+Rectangle width: 5.0, Height: 3.0
+Rectangle area: 15.0
