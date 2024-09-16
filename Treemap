@@ -1,0 +1,22 @@
+import java.util.TreeMap;
+
+public class Leaderboard {
+    public static void main(String[] args) {
+        TreeMap<Integer, String> leaderboard = new TreeMap<>();
+
+        // Add player scores (score -> player name)
+        leaderboard.put(1500, "Player1");
+        leaderboard.put(1200, "Player2");
+        leaderboard.put(1800, "Player3");
+        leaderboard.put(1000, "Player4");
+
+        // Display players in sorted order based on scores (ascending)
+        System.out.println("Leaderboard (ascending): " + leaderboard);
+
+        // Display players in descending order
+        System.out.println("Leaderboard (descending): " + leaderboard.descendingMap());
+
+        // Get the top scorer
+        System.out.println("Top scorer: " + leaderboard.lastEntry());
+    }
+}
