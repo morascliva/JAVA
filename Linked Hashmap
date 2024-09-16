@@ -1,0 +1,17 @@
+import java.util.LinkedHashMap;
+
+public class ApiResponseExample {
+    public static void main(String[] args) {
+        // Creating LinkedHashMap to store API response data
+        LinkedHashMap<String, String> userDetails = new LinkedHashMap<>();
+
+        // Simulating API response with user details
+        userDetails.put("UserID", "12345");
+        userDetails.put("Name", "John Doe");
+        userDetails.put("Email", "johndoe@example.com");
+        userDetails.put("Country", "USA");
+
+        // Printing user details in the order they were inserted
+        userDetails.forEach((key, value) -> System.out.println(key + ": " + value));
+    }
+}
