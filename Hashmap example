@@ -1,0 +1,27 @@
+import java.util.HashMap;
+
+public class hashMap {
+    public static void main(String[] args) {
+        // Create a HashMap to store Integer keys and String values
+        HashMap<Integer, String> map = new HashMap<>();
+        
+        // Adding key-value pairs
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+        map.put(3, "Cherry");
+        
+        System.out.println(map);
+        // Retrieving value for a specific key
+        System.out.println("Key 1: " + map.get(1));  // Output: Apple
+
+     
+        // Check if a key exists
+        System.out.println("Contains key 2? " + map.containsKey(2));  // true
+
+        // Removing a key-value pair
+        map.remove(2);
+
+        // Check size of HashMap
+        System.out.println("Size of HashMap: " + map.size());  // Output: 2
+    }
+}
