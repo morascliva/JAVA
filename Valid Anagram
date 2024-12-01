@@ -1,0 +1,55 @@
+Valid Anagram
+
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+ 
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+
+Output: true
+
+Example 2:
+
+Input: s = "rat", t = "car"
+
+Output: false
+
+
+
+import java.util.Arrays;
+
+public class Solution {
+    public boolean isAnagram(String s, String t) {
+        // If lengths are different, they cannot be anagrams
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        // Convert strings to character arrays
+        char[] sArray = s.toCharArray();
+        char[] tArray = t.toCharArray();
+
+        // Sort both arrays
+        Arrays.sort(sArray);
+        Arrays.sort(tArray);
+
+        // Compare sorted arrays
+        return Arrays.equals(sArray, tArray);
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        // Example 1
+        String s1 = "anagram";
+        String t1 = "nagaram";
+        System.out.println(solution.isAnagram(s1, t1)); // Output: true
+
+        // Example 2
+        String s2 = "rat";
+        String t2 = "car";
+        System.out.println(solution.isAnagram(s2, t2)); // Output: false
+    }
+}
