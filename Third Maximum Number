@@ -1,0 +1,58 @@
+Third Maximum Number
+Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number.
+
+ 
+
+Example 1:
+
+Input: nums = [3,2,1]
+Output: 1
+Explanation:
+The first distinct maximum is 3.
+The second distinct maximum is 2.
+The third distinct maximum is 1.
+Example 2:
+
+Input: nums = [1,2]
+Output: 2
+Explanation:
+The first distinct maximum is 2.
+The second distinct maximum is 1.
+The third distinct maximum does not exist, so the maximum (2) is returned instead.
+
+import java.util.*;
+
+public class Solution {
+    public int thirdMax(int[] nums) {
+        // Use a TreeSet to maintain sorted distinct elements in descending order
+        TreeSet<Integer> set = new TreeSet<>(Collections.reverseOrder());
+
+        // Add all numbers to the set
+        for (int i = 0; i < nums.length; i++) {
+            set.add(nums[i]);
+        }
+
+        // If there are less than 3 distinct numbers, return the maximum
+        if (set.size() < 3) {
+            return set.first();
+        }
+
+        // Otherwise, remove the first two maximums and return the third
+        set.pollFirst(); // Remove the largest
+        set.pollFirst(); // Remove the second largest
+        return set.first(); // The third largest
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        int[] nums1 = {3, 2, 1};
+        System.out.println("Third maximum: " + solution.thirdMax(nums1)); // Output: 1
+
+        int[] nums2 = {1, 2};
+        System.out.println("Third maximum: " + solution.thirdMax(nums2)); // Output: 2
+
+        int[] nums3 = {2, 2, 3, 1};
+        System.out.println("Third maximum: " + solution.thirdMax(nums3)); // Output: 1
+    }
+}
