@@ -1,3 +1,4 @@
+
 class Solution {
     public int DiagonalSum(int[][] matrix) {
         int n = matrix.length;
