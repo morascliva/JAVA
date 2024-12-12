@@ -1,4 +1,5 @@
- The line of code Scanner input = new Scanner(System.in); is used to create an instance of the Scanner class for reading input from the console (also known as standard input).
+Scanner input= new Scanner(System.in);
+The line of code Scanner input = new Scanner(System.in); is used to create an instance of the Scanner class for reading input from the console (also known as standard input).
 
 Let's break down the code step by step:
 
