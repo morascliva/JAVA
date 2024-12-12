@@ -1,3 +1,4 @@
+
 class Solution {
     static String triDownwards(String S) {
         StringBuilder result = new StringBuilder();
