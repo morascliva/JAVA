@@ -1,5 +1,4 @@
 
-
 class Solution {
 
     static String onesComplement(String S, int N) {
