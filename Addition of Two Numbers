@@ -1,4 +1,5 @@
 
+
 class Solution {
     static int addition(int A, int B) {
         // Calculate the sum of A and B
