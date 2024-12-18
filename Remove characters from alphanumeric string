@@ -1,3 +1,4 @@
+
 class Solution {
     String removeCharacters(String S) {
         // Use regex to remove all non-numeric characters
