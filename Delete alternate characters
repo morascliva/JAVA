@@ -1,4 +1,5 @@
 
+
 class Solution {
     static String delAlternate(String S) {
         StringBuilder result = new StringBuilder();
