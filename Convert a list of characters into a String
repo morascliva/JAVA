@@ -1,3 +1,4 @@
+
 class Solution {
     public String chartostr(char arr[], int N) {
         // Create a StringBuilder to efficiently build the string
