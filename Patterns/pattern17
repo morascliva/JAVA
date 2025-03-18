@@ -1,3 +1,4 @@
+
    static void pattern17(int n) {
         for (int row = 1; row <= 2 * n; row++) {
 
