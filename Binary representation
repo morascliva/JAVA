@@ -1,4 +1,5 @@
 
+
 class Solution{
     static String getBinaryRep(int N){
         StringBuilder binary = new StringBuilder();                                //This line creates a StringBuilder object named binary. StringBuilder is used to efficiently construct strings,
